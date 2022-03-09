@@ -1,35 +1,22 @@
 package Model;
 
 public class Filial {
-  private Integer id;
+  private Integer id_filial;
   private String nome;
 
-    /**
-     * @return Integer return the id
-     */
-    public Integer getId() {
-        return id;
-    }
+  public Integer getId() {
+    return id_filial;
+  }
 
-    /**
-     * @param id the id to set
-     */
-    public void setId(Integer id) {
-        this.id = id;
-    }
+  public void setId(Integer id) {
+    this.id_filial = id;
+  }
 
-    /**
-     * @return String return the nome
-     */
-    public String getNome() {
-        return nome;
-    }
+  public String getNome() {
+    return nome;
+  }
 
-    /**
-     * @param nome the nome to set
-     */
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
 }
