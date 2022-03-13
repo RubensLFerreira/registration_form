@@ -1,20 +1,13 @@
 package Model;
 
-public class Instrutor extends Pessoa{
+public class Instrutor {
   private String formacao;
 
-    /**
-     * @return String return the formacao
-     */
-    public String getFormacao() {
-        return formacao;
-    }
+  public String getFormacao() {
+    return formacao;
+  }
 
-    /**
-     * @param formacao the formacao to set
-     */
-    public void setFormacao(String formacao) {
-        this.formacao = formacao;
-    }
-
+  public void setFormacao(String formacao) {
+    this.formacao = formacao;
+  }
 }

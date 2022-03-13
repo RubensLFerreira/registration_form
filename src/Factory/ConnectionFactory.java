@@ -7,13 +7,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ConnectionFactory {
-  private static final String banco = "#";
+  private static final String banco = "projetopoo";
   private static final String usuario = "root";
-  private static final String senha = "#";
+  private static final String senha = "noob0987";
 
   public static Connection getConnect() {
     try {
-      return DriverManager.getConnection();
+      return DriverManager.getConnection("jdbc:mysql://localhost:3306/"+banco, usuario, senha);
     } catch (SQLException ex) {
       Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
     }

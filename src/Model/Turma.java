@@ -33,11 +33,11 @@ public class Turma {
     this.dataFim = dataFim;
   }
 
-  public Filial getFilial() {
+  public int getFilial() {
     return filial;
   }
 
-  public void setFilial(Filial filial) {
+  public void setFilial(int filial) {
     this.filial = filial;
   }
 
