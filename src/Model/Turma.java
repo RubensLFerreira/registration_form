@@ -6,7 +6,7 @@ public class Turma {
   private Integer id_turma;
   private Date dateInicio;
   private Date dataFim;
-  private Filial filial;
+  private Integer filial;
   private Instrutor instrutor;
 
   public Integer getId() {
@@ -33,11 +33,11 @@ public class Turma {
     this.dataFim = dataFim;
   }
 
-  public int getFilial() {
+  public Integer getFilial() {
     return filial;
   }
 
-  public void setFilial(int filial) {
+  public void setFilial(Integer filial) {
     this.filial = filial;
   }
 

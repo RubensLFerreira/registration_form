@@ -13,7 +13,7 @@ public class ConnectionFactory {
 
   public static Connection getConnect() {
     try {
-      return DriverManager.getConnection("jdbc:mysql://localhost:3306/"+banco, usuario, senha);
+      return DriverManager.getConnection("jdbc:mysql://localhost:3306/" + banco, usuario, senha);
     } catch (SQLException ex) {
       Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
     }

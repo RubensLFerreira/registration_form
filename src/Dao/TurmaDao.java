@@ -78,6 +78,7 @@ public class TurmaDao extends Dao{
     } catch (SQLException ex) {
       System.out.println("erro" + ex.getMessage());
     }
+  }
 
    public void atualizar(Turma t) {
      try {
@@ -91,6 +92,6 @@ public class TurmaDao extends Dao{
      } catch (SQLException ex) {
        System.out.println("erro" + ex.getMessage());
      }
-   }
+   
   }
 }

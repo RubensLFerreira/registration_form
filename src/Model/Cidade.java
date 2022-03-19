@@ -1,58 +1,27 @@
 package Model;
 
 public class Cidade {
-  private Integer id;
-  private Uf estado;
-  private String nome;
-  private String rua;
-  private String numero;
-  private String cep;
-
-  public Uf getEstado() {
-    return estado;
-  }
-
-  public void setEstado(Uf estado) {
-    this.estado = estado;
-  }
-
-  public String getNome() {
-    return nome;
-  }
-
-  public void setNome(String nome) {
-    this.nome = nome;
-  }
-
-  public String getRua() {
-    return rua;
-  }
-
-  public void setRua(String rua) {
-    this.rua = rua;
-  }
-
-  public String getNumero() {
-    return numero;
-  }
-
-  public void setNumero(String numero) {
-    this.numero = numero;
-  }
-
-  public String getCep() {
-    return cep;
-  }
-
-  public void setCep(String cep) {
-    this.cep = cep;
-  }
-
-  public Integer getId() {
-    return id;
-  }
-
-  public void setId(Integer id) {
-    this.id = id;
-  }
+    private Integer id_cidade;
+    private String nome_cidade;
+    private Uf estado;
+    
+	public Uf getEstado() {
+		return estado;
+	}
+	public void setEstado(Uf estado) {
+		this.estado = estado;
+	}
+	public Integer getId_cidade() {
+		return id_cidade;
+	}
+	public void setId_cidade(Integer id_cidade) {
+		this.id_cidade = id_cidade;
+	}
+	public String getNome_cidade() {
+		return nome_cidade;
+	}
+	public void setNome_cidade(String nome_cidade) {
+		this.nome_cidade = nome_cidade;
+	}
+  
 }
