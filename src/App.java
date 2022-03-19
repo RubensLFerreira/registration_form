@@ -12,29 +12,32 @@ public class App {
 		AlunoView alunoView = new AlunoView();
 		List<Aluno> alunos = new ArrayList<>();
 
-	    Scanner jIn = new Scanner(System.in);
-	    Integer opcao = null;
-	    do {
-	      Main.menu();
-	      System.out.println("Digite a opção: ");
-	      opcao = Integer.parseInt(jIn.nextLine());
+		Scanner jIn = new Scanner(System.in);
+		Integer opcao = null;
+		do {
+			Main.menu();
+			System.out.println("Digite a opção: ");
+			opcao = Integer.parseInt(jIn.nextLine());
 
-	      switch (opcao) {
-			
-			case 1: alunoView.salvar();
+			switch (opcao) {
+
+			case 1:
+				alunoView.salvar();
 				break;
-				
-			//case 2: alunoView.atualizar();
-			//	break;
-			 
-	        case 3:
-	          alunoView.listar();
-	          break;
-			/*
-			 * case 4: alunoView.excluir(); break;
-			 */
-	      }
-	    } while (opcao != 0);
+
+			case 2:
+				alunoView.atualizar();
+				break;
+
+			case 3:
+				alunoView.listar();
+				break;
+			case 4:
+				alunoView.excluir();
+				break;
+
+			}
+		} while (opcao != 0);
 
 	}
 
