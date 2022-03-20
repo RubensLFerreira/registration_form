@@ -30,6 +30,7 @@ public class App {
 				break;
 
 			case 3:
+				//turmaView.listar();
 				alunoView.listar();
 				break;
 			case 4:
@@ -38,7 +39,7 @@ public class App {
 
 			}
 		} while (opcao != 0);
-
+		jIn.close();
 	}
 
 }
