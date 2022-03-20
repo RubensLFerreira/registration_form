@@ -30,7 +30,7 @@ public class AlunoView {
 		a.setId(Integer.parseInt(jIn.nextLine()));
 		System.out.println("Digite o novo nome do aluno: ");
 		a.setNome(jIn.nextLine());
-		// System.out.println("Digite no id da cidade");
+		// System.out.println("Digite novo id da cidade");
 		// a.setCidade(Integer.parseInt(jIn.nextLine()));
 		aControle.atualizar(a);
 	}
