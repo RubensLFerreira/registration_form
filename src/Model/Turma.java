@@ -1,18 +1,19 @@
 package Model;
 
-import java.sql.Date;
-import java.sql.Time;
-
 public class Turma {
 	private Integer id_turma;
-	private Time hora_inicio;
-	private Time hora_fim;
-	private Date dia_inicio;
-	private Date dia_fim;
-	private Curso curso;
-	private Instrutor instrutor;
-	private Filial filial;
+	private String hora_inicio;
+	private String hora_fim;
+	private String dia_inicio;
+	private String dia_fim;
+	private Curso cursos;
+	private Instrutor instrutores;
+	private Filial filiais;
 	private Area area;
+	
+	Curso curso = new Curso();
+	Instrutor instrutor = new Instrutor();
+	Filial filial = new Filial();
 	
 	public Integer getId_turma() {
 		return id_turma;
@@ -20,28 +21,28 @@ public class Turma {
 	public void setId_turma(Integer id_turma) {
 		this.id_turma = id_turma;
 	}
-	public Time getHora_inicio() {
+	public String getHora_inicio() {
 		return hora_inicio;
 	}
-	public void setHora_inicio(Time hora_inicio) {
+	public void setHora_inicio(String hora_inicio) {
 		this.hora_inicio = hora_inicio;
 	}
-	public Time getHora_fim() {
+	public String getHora_fim() {
 		return hora_fim;
 	}
-	public void setHora_fim(Time hora_fim) {
+	public void setHora_fim(String hora_fim) {
 		this.hora_fim = hora_fim;
 	}
-	public Date getDia_inicio() {
+	public String getDia_inicio() {
 		return dia_inicio;
 	}
-	public void setDia_inicio(Date dia_inicio) {
+	public void setDia_inicio(String dia_inicio) {
 		this.dia_inicio = dia_inicio;
 	}
-	public Date getDia_fim() {
+	public String getDia_fim() {
 		return dia_fim;
 	}
-	public void setDia_fim(Date dia_fim) {
+	public void setDia_fim(String dia_fim) {
 		this.dia_fim = dia_fim;
 	}
 	public Curso getCurso() {
@@ -68,4 +69,22 @@ public class Turma {
 	public void setArea(Area area) {
 		this.area = area;
 	}
+	
+	public void setCursos(Curso cursos) {
+		this.cursos = cursos;
+	}
+	public Instrutor getInstrutores() {
+		return instrutores;
+	}
+	public void setInstrutores(Instrutor instrutores) {
+		this.instrutores = instrutores;
+	}
+	public Filial getFiliais() {
+		return filiais;
+	}
+	public void setFiliais(Filial filiais) {
+		this.filiais = filiais;
+	}
+	
 }
+

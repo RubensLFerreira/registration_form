@@ -30,7 +30,7 @@ public class AlunoView {
 		a.setId(Integer.parseInt(jIn.nextLine()));
 		System.out.println("Digite o novo nome do aluno: ");
 		a.setNome(jIn.nextLine());
-		// System.out.println("Digite novo id da cidade");
+		// System.out.println("Digite o ID da cidade");
 		// a.setCidade(Integer.parseInt(jIn.nextLine()));
 		aControle.atualizar(a);
 	}
@@ -38,11 +38,9 @@ public class AlunoView {
 	public void listar() {
 		List<Aluno> alunos = aControle.listar();
 		for (Aluno aluno : alunos) {
-			System.out.print("ID aluno: " + aluno.getId() + " Nome: " + aluno.getNome());
-			System.out.print(
-					" ID cidade: " + aluno.getCidade().getId_cidade() + " Nome: " + aluno.getCidade().getNome_cidade());
-			System.out.println(" ID estado: " + aluno.getCidade().getEstado().getId_estado() + " Nome: "
-					+ aluno.getCidade().getEstado().getNome_estado());
+			System.out.print("ID aluno: "  + aluno.getId() + " Nome: " + aluno.getNome());
+			System.out.print(" || ID cidade: " + aluno.getCidade().getId_cidade() + " Nome cidade: " + aluno.getCidade().getNome_cidade());
+			System.out.println(" || ID estado: " + aluno.getCidade().getEstado().getId_estado() + " Nome estado: " + aluno.getCidade().getEstado().getNome_estado());
 		}
 	}
 
