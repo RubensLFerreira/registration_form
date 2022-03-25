@@ -85,6 +85,9 @@ public class Turma {
 	public void setFiliais(Filial filiais) {
 		this.filiais = filiais;
 	}
+	public Curso getCursos() {
+		return cursos;
+	}
 	
 }
 

@@ -19,7 +19,7 @@ public class MatriculaDao extends Dao {
 			try {
 				PreparedStatement stmt = this.conexao.prepareStatement("select m.id_matricula, m.status_matricula, m.data_matricula, m.id_aluno, m.id_turma "
 						+ " from matricula m inner join aluno a on (m.id_aluno=a.id_aluno) "
-						+ " inner join t on (m.id_turma=t.id_turma);");
+						+ " inner join turma t on (m.id_turma=t.id_turma);");
 				ResultSet rs = stmt.executeQuery();
 				
 				while (rs.next()) {
@@ -67,4 +67,31 @@ public class MatriculaDao extends Dao {
 		}
 		return last_inserted_id;
 	} 
+	
+	
+	public void atualizar(Matricula matricula) {
+		try {
+			PreparedStatement stmt = this.conexao.prepareStatement("update matricula set status_matricula=?, data_matricula=?, id_alun0=?, id_turma=? "
+					+ " where id_matricula=?");
+			stmt.setString(1, matricula.getStatus_matricula());
+			stmt.setString(2, matricula.getData_matricula());
+			stmt.setInt(3, matricula.getAluno().getId());
+			stmt.setInt(4, matricula.getTurma().getId_turma());
+			stmt.executeUpdate();
+			
+		} catch (SQLException ex) {
+			System.out.println("ERRO: " + ex.getMessage());
+		}
+	}
+	
+	
+	public void excluir(Integer id_matricula) {
+		try {
+			PreparedStatement stmt = this.conexao.prepareStatement("delete from matricula where id_matricula=?");
+			stmt.setInt(1, id_matricula);
+			stmt.executeUpdate();
+		} catch (SQLException ex) {
+			System.out.println("ERRO: " + ex.getMessage());
+		}
+	}
 }

@@ -1,22 +1,26 @@
-import java.util.ArrayList;
-import java.util.List;
+//import java.util.ArrayList;
+//import java.util.List;
 import java.util.Scanner;
 
-import Model.Aluno;
-import Model.Instrutor;
+//import Model.Aluno;
+//import Model.Matricula;
 import View.AlunoView;
 import View.Main;
+import View.MatriculaView;
 import View.TurmaView;
 
 public class App {
 
 	public static void main(String[] args) {
 		AlunoView alunoView = new AlunoView();
-		List<Aluno> alunos = new ArrayList<>();
+		//List<Aluno> alunos = new ArrayList<>();
 		
 		TurmaView turmaView = new TurmaView();
-		List<Aluno> turmas = new ArrayList<>();
-
+		//List<Aluno> turmas = new ArrayList<>();
+		
+		MatriculaView matriculaView = new MatriculaView();
+		//List<Matricula> matriculas = new ArrayList<>();
+		
 		Scanner jIn = new Scanner(System.in);
 		Integer opcao = null;
 		do {
@@ -56,6 +60,22 @@ public class App {
 				
 			case 8:
 				turmaView.excluir();
+				break;
+				
+			case 9:
+				matriculaView.salvar();
+				break;
+				
+			case 10:
+				matriculaView.atualizar();
+				break;
+				
+			case 11:
+				matriculaView.listar();
+				break;
+				
+			case 12:
+				matriculaView.excluir();
 				break;
 			}
 			

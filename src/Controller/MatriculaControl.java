@@ -4,13 +4,9 @@ import java.util.List;
 
 import Dao.FactoryDao;
 import Model.Matricula;
-import Model.Turma;
 
 public class MatriculaControl {
 
-	public List<Matricula> listar() {
-		return FactoryDao.getMatriculaDao().listar();
-	}
 	
 	public Matricula salvar(String status_matricula, String data_matricula, Integer id_aluno, Integer id_turma) {
 		Matricula matricula = new Matricula();
@@ -22,5 +18,18 @@ public class MatriculaControl {
 		matricula.setId_matricula(FactoryDao.getMatriculaDao().salvar(matricula));
 		
 		return matricula;
+	}
+	
+	public void atualizar(Matricula matricula) {
+		FactoryDao.getMatriculaDao().atualizar(matricula);
+	}
+	
+	public List<Matricula> listar() {
+		return FactoryDao.getMatriculaDao().listar();
+	}
+	
+	
+	public void excluir(Integer id_matricula) {
+		FactoryDao.getMatriculaDao().excluir(id_matricula);
 	}
 }
